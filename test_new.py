@@ -12,8 +12,8 @@ def browser_size():
 
 def test_positive_search(browser_size):
     browser.element('[name="q"]').should(be.blank).type('yashaka/selene').press_enter()
-    browser.element('[data-testid="result"]').should(
-        have.text('yashaka/selene: User-oriented Web UI browser tests in Python - GitHub'))
+    browser.element('[data-testid="result"]').should(have.text(
+        'yashaka/selene: User-oriented Web UI browser tests in Python - GitHub'))
 
 
 def test_negavite_search(browser_size):
